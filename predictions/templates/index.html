@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header-grid">
+        <div>
+          <h1>Iris Species</h1>
+          <p class="header-total">Clasificación de plantas iris en tres especies</p>
+        </div>
+        <div class="header-item">
+          <p class="header-item-title">Machine Learning</p>
+          <img src="{% static 'images/favicon2.ico' %}" alt="">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="information">
+      <div class="wrapper">
+        <div class="information-grid">
+          <h2>El problema de clasificación del iris</h2>
+          <p>
+            Imagina que eres un botánico que busca una forma automatizada de categorizar cada 
+            flor de Iris que encuentres. El aprendizaje automático proporciona muchos 
+            algoritmos para clasificar las flores estadísticamente. Por ejemplo, un sofisticado 
+            programa de aprendizaje automático podría clasificar las flores basándose en fotografías. 
+            Nuestras ambiciones son más modestas: vamos a clasificar las flores de Iris en función 
+            de las medidas de largo y ancho de sus sépalos y pétalos.
+          </p>
+          <p>
+            El género Iris comprende alrededor de 300 especies, pero nuestro programa solo clasificará 
+            las siguientes tres:
+          </p>
+          <p>
+            <ul>
+              <li>
+                Iris setosa
+              </li>
+              <li>
+                Iris virginica
+              </li>
+              <li>
+                Iris versicolor
+              </li>
+            </ul>
+          </p>
+          <div class="information-link">
+            <a href="https://www.kaggle.com/uciml/iris">
+              Link de la Base de Datos
+            </a>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-11.5.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="details">
+      <div class="wrapper">
+        <div class="details-grid">
+          <article class="details-item">
+            <img src="{% static 'images/iris_setosa.jpg' %}" alt="">
+            <h2>Iris Setosa</h2>
+          </article>
+          <article class="details-item">
+            <img src="{% static 'images/iris_versicolor.jpg' %}" alt="">
+            <h2>Iris Versicolor</h2>
+          </article>
+          <article class="details-item">
+            <img src="{% static 'images/iris_virginica.jpg' %}" alt="">
+            <h2>Iris Virginica</h2>
+          </article>
+          <article class="details-item">
+            <img src="{% static 'images/petalo_sepalo.png' %}" alt="">
+            <h2>Pétalo y Sépalo</h2>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section  class="examples">
+      <div class="wrapper">
+        <div class="examples-grid">
+          <div class="example">
+            <div class="header-example">
+              <div class="circuloRojo"></div>
+              <div class="circuloAmarillo"></div>
+              <div class="circuloVerde"></div>
+            </div>
+            <div class="body-example">
+              <h2>Ejemplo 1:</h2>
+              <ul>
+                <li>Largo sépalo: 5.1</li>
+                <li>Ancho sépalo: 3.3</li>
+                <li>Largo pétalo: 1.7</li>
+                <li>Ancho pétalo: 0.5</li>
+              </ul>
+            </div>
+          </div>
+          <div class="example">
+            <div class="header-example">
+              <div class="circuloRojo"></div>
+              <div class="circuloAmarillo"></div>
+              <div class="circuloVerde"></div>
+            </div>
+            <div class="body-example">
+              <h2>Ejemplo 2:</h2>
+              <ul>
+                <li>Largo sépalo: 5.9</li>
+                <li>Ancho sépalo: 3.0</li>
+                <li>Largo pétalo: 4.2</li>
+                <li>Ancho pétalo: 1.5</li>
+              </ul>
+            </div>
+          </div>
+          <div class="example">
+            <div class="header-example">
+              <div class="circuloRojo"></div>
+              <div class="circuloAmarillo"></div>
+              <div class="circuloVerde"></div>
+            </div>
+            <div class="body-example">
+              <h2>Ejemplo 3:</h2>
+                <ul>
+                  <li>Largo sépalo: 6.9</li>
+                  <li>Ancho sépalo: 3.1</li>
+                  <li>Largo pétalo: 5.4</li>
+                  <li>Ancho pétalo: 2.1</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+    <section class="form">
+      <div class="wrapper">
+        <div class="form-grid">
+          <h2>
+            Probar la clasificación del iris.
+          </h2>
+          <p>
+            Usemos el modelo entrenado para hacer algunas predicciones 
+            sobre ejemplos sin etiquetar
+          </p>
+          <form action="">
+            <div class="input-grid">
+              <input type="number" placeholder="SepalLengthCm">
+              <input type="number" placeholder="SepalWidthCm">
+              <input type="number" placeholder="PetalLengthCm">
+              <input type="number" placeholder="PetalWidthCm">
+            </div>
+              <button class="button">Predecir</button>
+          </form>
+          <p><i class="fas fa-feather-alt"></i></p>
+          <p><i class="fas fa-spa"></i></p>
+          <p><i class="fas fa-seedling"></i></p>
+          <p><i class="fab fa-pagelines"></i></p>
+          <p><i class="fas fa-leaf"></i></p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
