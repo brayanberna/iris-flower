@@ -247,6 +247,63 @@ img {
   max-width: 100%;
 }
 
+.predictions {
+/*   border: 1px solid red; */
+  margin-top: 2em;
+  margin-bottom: 5em;
+  font-family: var(--inter);
+}
+.predictions-grid {
+/*   border: 1px solid white; */
+  display: grid;
+}
+.prediction {
+/*   border: 1px solid yellow; */
+  overflow: hidden;
+  background: #252b43;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2em 0;
+  position: relative;
+}
+.prediction:before {
+  content: "";
+  height: 4px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to right, #33964b 0%, #5fad00 100%);
+}
+.prediction-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #6f717e;
+}
+.prediction-title i {
+  color: #80b341;
+margin-left: 5px;
+}
+.prediction-body {
+  margin-bottom: 1em;
+}
+.prediction-porc {
+  font-size: 50px;
+  font-weight: 700;
+}
+.prediction-name {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.3em;
+  color: #8d909e;
+}
+
 @media screen and (min-width: 480px) {
 
   .details-grid {
@@ -257,6 +314,10 @@ img {
     max-width: 250px;
     margin: 0 auto;
   }
+  .predictions-grid {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 
 }
 
@@ -264,7 +325,7 @@ img {
 
   .form-grid {
     max-width: 728px;
-    margin: 0 auto;;
+    margin: 0 auto;
     padding: 42px 64px;
   }
   .form form .input-grid {

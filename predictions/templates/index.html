@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/ef746928d3.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -152,23 +153,37 @@
             Usemos el modelo entrenado para hacer algunas predicciones 
             sobre ejemplos sin etiquetar
           </p>
-          <form action="">
+          <form action="" method="post">
+            {% csrf_token %}
             <div class="input-grid">
-              <input type="number" placeholder="SepalLengthCm">
-              <input type="number" placeholder="SepalWidthCm">
-              <input type="number" placeholder="PetalLengthCm">
-              <input type="number" placeholder="PetalWidthCm">
+              <input type="number" placeholder="SepalLengthCm" name="largo_sepalo" min="0" max="8" step="any" required>
+              <input type="number" placeholder="SepalWidthCm" name="ancho_sepalo" min="0" max="8" step="any" required>
+              <input type="number" placeholder="PetalLengthCm" name="largo_petalo" min="0" max="8" step="any" required>
+              <input type="number" placeholder="PetalWidthCm" name="ancho_petalo" min="0" max="8" step="any" required>
             </div>
-              <button class="button">Predecir</button>
+              <button type="submit" class="button">Predecir</button>
           </form>
-          <p><i class="fas fa-feather-alt"></i></p>
-          <p><i class="fas fa-spa"></i></p>
-          <p><i class="fas fa-seedling"></i></p>
-          <p><i class="fab fa-pagelines"></i></p>
-          <p><i class="fas fa-leaf"></i></p>
         </div>
       </div>
     </section>
+    {% if name %}
+      <section class="predictions">
+        <div class="wrapper">
+          <div class="predictions-grid">
+            <div class="prediction">
+              <p class="prediction-title">
+                Predicción
+                <i class="fas fa-seedling"></i>
+              </p>
+              <div class="prediction-body">
+                <span class="prediction-porc">{{ porcentaje }}%</span>
+                <span class="prediction-name">{{ name }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    {% endif %}
   </main>
 </body>
 </html>

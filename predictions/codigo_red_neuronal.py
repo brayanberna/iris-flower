@@ -111,6 +111,12 @@ for (x, y) in test_dataset:
 
 print("Test set accuracy: {:.3%}".format(test_accuracy.result()))
 
+target_dir = 'modelos'
+if not os.path.exists(target_dir):
+  os.mkdir(target_dir)
+model.save('modelos/modelo_entrenado.h5')
+model.save_weights('modelos/pesos_modelo_entrenado.h5')
+
 tf.stack([y,prediction],axis=1)
 
 predict_dataset = tf.convert_to_tensor([
