@@ -10,8 +10,8 @@ Proyecto de práctica de una tienda virtual.
 ![Imagen2](https://user-images.githubusercontent.com/61950433/99163032-fa601f80-26e2-11eb-98aa-6a1cca9d7cec.PNG)
 # Explicación
 - Este proyecto utiliza el aprendizaje automático para clasificar las flores de iris por especie. Se estructura de la siguiente forma:
-  - 1. Importe y analice el conjunto de datos.
-  - 2. Seleccione el tipo de modelo.
+  - 1. Importa y analiza el conjunto de datos.
+  - 2. Selecciona el tipo de modelo.
   - 3. Entrena al modelo.
-  - 4. Evalúe la efectividad del modelo.
+  - 4. Se evalúa la efectividad del modelo.
   - 5. Utilice el modelo entrenado para hacer predicciones.
