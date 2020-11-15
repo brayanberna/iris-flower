@@ -1,1 +1,1 @@
-Web: gunicorn iris_flower.wsgi
+web: gunicorn iris_flower.wsgi
